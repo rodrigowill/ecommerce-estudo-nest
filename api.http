@@ -1,0 +1,33 @@
+GET http://localhost:3000/products
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 12",
+    "description": "Product 12 description",
+    "image_url": "https://via.placeholder.com/12.png",
+    "price": 1200
+}
+
+###
+GET http://localhost:3000/orders
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "product_id": "03b2af3b-ff2d-49e2-a805-baaf2a2b59a8",
+            "quantity": 1
+        },
+        {
+            "product_id": "5d54bfc9-4485-4e3e-9125-27173bd10000",
+            "quantity": 2
+        }
+    ],
+    "card_hash": "123"
+}
